@@ -3,12 +3,24 @@ class Restaurant():
     def __init__(self, restaurant_name, cuisine_type):
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
+        # Dynamic attributes
+        self.number_served = 0
 
     def descritbe_restaurant(self):
         print("The restaurant " + self.restaurant_name.title() + " makes good " + self.cuisine_type + ".")
 
     def open_restaurant(self):
         print("The restaurant " + self.restaurant_name.title() + " is OPEN!")
+
+    def read_number_served(self):
+        print("Number of serves: " + str(self.number_served))
+
+    def set_number_served(self, serves):
+        self.number_served = serves
+
+    def increment_number_served(self, inc_serves):
+        self.number_served += inc_serves
+
 
 class User():
 
@@ -37,3 +49,13 @@ my_user = User("Ryan", "Vola", 15, "Male")
 
 my_user.describe_user()
 my_user.greet_user()
+
+my_restaurant.number_served = 5
+my_restaurant.read_number_served()
+
+my_restaurant.set_number_served(10)
+my_restaurant.read_number_served()
+
+my_restaurant.increment_number_served(20)
+my_restaurant.read_number_served()
+
