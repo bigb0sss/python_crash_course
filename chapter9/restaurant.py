@@ -44,7 +44,7 @@ my_restaurant = Restaurant('Pizzaria', "Hoggie")
 
 my_restaurant.descritbe_restaurant()
 my_restaurant.open_restaurant()
-
+ 
 my_user = User("Ryan", "Vola", 15, "Male")
 
 my_user.describe_user()
